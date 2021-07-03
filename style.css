@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.527);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid grey;
+    outline: none;
+    background-color: white;
+}
+.container {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+.container > button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+
+}
+.span-two {
+    grid-column: span 2;
+}
+.container .equals {
+    background-color: rgb(255, 166, 0);
+}
+.container .equals:hover {
+    background-color: rgba(255, 166, 0, 0.904);
+}
+.output {
+    grid-column: 1 /-1;
+    background-color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    color: white;
+    word-break: break-all;
+}
+.output .previous-operand {
+    font-size: 1rem;
+}
+.output .current-operand {
+    font-size: 2rem;
+}
