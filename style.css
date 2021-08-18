@@ -5,22 +5,32 @@
     padding: 0;
 }
 body {
-    background-color: rgba(0, 0, 0, 0.527);
+    background-color: #3b4664;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
+}
+.container .ac {
+    background-color: #647299;
+}
+.container .ac:hover {
+    background-color: #64729998;
 }
 .container > button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid grey;
     outline: none;
-    background-color: white;
+    background-color: #eae3db;
+    border-radius: 4px;
 }
 .container {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, 70px);
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: auto;
     grid-template-rows: minmax(100px, auto) repeat(5, 80px);
 }
 .container > button:hover {
@@ -31,14 +41,14 @@ body {
     grid-column: span 2;
 }
 .container .equals {
-    background-color: rgb(255, 166, 0);
+    background-color: #d13f30;
 }
 .container .equals:hover {
-    background-color: rgba(255, 166, 0, 0.904);
+    background-color: #d14030d5;
 }
 .output {
     grid-column: 1 /-1;
-    background-color: rgba(0, 0, 0, 0.87);
+    background-color: #181f32;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -53,4 +63,17 @@ body {
 }
 .output .current-operand {
     font-size: 2rem;
+}
+@media screen and (min-width:768px) {
+    .container {
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: minmax(100px, auto) repeat(5, 60px);
+        column-gap: .8rem;
+        row-gap: .8rem;
+    }
+    .container > button {
+        border-radius: 8px;
+    }
+    
+
 }
